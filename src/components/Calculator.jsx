@@ -1,3 +1,21 @@
+import { useState } from "react";
+import { buttons } from "../buttons";
+
+export default function Calculator (){
+    const [text, setText] = useState('');
+    const [action, SetAction] = useState('');
+
+    const buttonHanler = (e) => {
+        switch (e) {
+            case "C":
+                return setText((text) => text="");
+            case "=":
+                return SetAction((action) => action = result);
+        }        
+        setText((text) => text + e);             
+    }
+
+
     return (
         <>
         <form action="" name="calc" className="calculator">
